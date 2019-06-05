@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">BlogDemo</string>
+
+    <!-- 共用的 -->
+    <string name="btn_confirm">确定</string>
+    <string name="btn_cancel">取消</string>
+
+    <!-- 主界面 -->
+    <string name="main_screen_shot">截屏</string>
+
+    <!-- 截屏 -->
+    <string name="screen_shot_system">监听系统截屏</string>
+    <string name="screen_shot_system_cancel">取消监听系统截屏</string>
+    <string name="screen_shot_permission">如果您拒绝此权限，将无法监听系统截屏，请点击授予权限。</string>
+</resources>
