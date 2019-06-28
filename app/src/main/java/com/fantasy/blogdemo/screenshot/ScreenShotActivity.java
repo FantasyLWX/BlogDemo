@@ -20,7 +20,7 @@ import com.qw.soul.permission.bean.Permission;
  * 截屏
  * <pre>
  *     author  : Fantasy
- *     version : 1.0, 2019-06-05
+ *     version : 1.1, 2019-06-28
  *     since   : 1.0, 2019-06-05
  * </pre>
  */
@@ -94,7 +94,7 @@ public class ScreenShotActivity extends BaseActivity implements View.OnClickList
                 @Override
                 public void onShot(String path) {
                     Log.d(Constant.TAG, mClassName + " shot : " + path);
-                    showLongToast("捕获到系统截屏，截屏路径：" + path);
+                    showLongToast(getString(R.string.screen_shot_result) + path);
                 }
             });
         } else {
