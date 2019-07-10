@@ -8,6 +8,7 @@
     <!-- 主界面 -->
     <string name="main_screen_shot">截屏</string>
     <string name="main_captcha">图形验证码</string>
+    <string name="main_crypto">加解密</string>
 
     <!-- 截屏 -->
     <string name="screen_shot_system">监听系统截屏</string>
@@ -19,4 +20,16 @@
     <string name="captcha_hint">请输入验证码</string>
     <string name="captcha_correct">验证码正确</string>
     <string name="captcha_wrong">验证码错误</string>
+
+    <!-- 加解密 -->
+    <string name="crypto_key_hint">请输入密钥</string>
+    <string name="crypto_iv_hint">请输入偏移量，ECB模式不用填写</string>
+    <string name="crypto_data_hint">请输入待加密或待解密的数据</string>
+    <string name="crypto_result_hint">输出结果</string>
+    <string name="crypto_exception">异常信息：</string>
+    <string name="crypto_md5">MD5加密</string>
+    <string name="crypto_3des_ecb_encrypt">3DES（ECB模式）加密</string>
+    <string name="crypto_3des_ecb_decrypt">3DES（ECB模式）解密</string>
+    <string name="crypto_3des_cbc_encrypt">3DES（CBC模式）加密</string>
+    <string name="crypto_3des_cbc_decrypt">3DES（CBC模式）解密</string>
 </resources>

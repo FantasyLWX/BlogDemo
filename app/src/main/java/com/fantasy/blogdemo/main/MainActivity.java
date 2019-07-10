@@ -9,13 +9,14 @@ import android.widget.TextView;
 import com.fantasy.blogdemo.R;
 import com.fantasy.blogdemo.base.BaseActivity;
 import com.fantasy.blogdemo.captcha.CaptchaActivity;
+import com.fantasy.blogdemo.crypto.CryptoActivity;
 import com.fantasy.blogdemo.screenshot.ScreenShotActivity;
 
 /**
  * 主界面
  * <pre>
  *     author  : Fantasy
- *     version : 1.1, 2019-06-28
+ *     version : 1.2, 2019-07-10
  *     since   : 1.0, 2019-06-05
  * </pre>
  */
@@ -41,6 +42,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         ((TextView) findViewById(R.id.tv_title_bar_title)).setText(R.string.app_name);
         findViewById(R.id.cd_main_screen_shot).setOnClickListener(this);
         findViewById(R.id.cd_main_captcha).setOnClickListener(this);
+        findViewById(R.id.cd_main_crypto).setOnClickListener(this);
     }
 
     @Override
@@ -59,6 +61,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 break;
             case R.id.cd_main_captcha:
                 CaptchaActivity.actionStart(mContext);
+                break;
+            case R.id.cd_main_crypto:
+                CryptoActivity.actionStart(mContext);
                 break;
             default:
                 break;
