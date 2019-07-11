@@ -11,7 +11,7 @@ import javax.crypto.spec.SecretKeySpec;
  * 3DES加解密工具类
  * <pre>
  *     author  : Fantasy
- *     version : 1.0, 2019-07-10
+ *     version : 1.1, 2019-07-11
  *     since   : 1.0, 2019-07-10
  * </pre>
  */
@@ -34,7 +34,7 @@ public class TripleDESUtils {
         Cipher cipher = Cipher.getInstance("DESede/ECB/PKCS5Padding"); // Cipher完成加密或解密工作类
         cipher.init(Cipher.ENCRYPT_MODE, secretKey); // 对Cipher初始化，加密模式
         byte[] bytes = cipher.doFinal(data.getBytes(CHARSET)); // 加密data
-        return Base64.encodeToString(bytes, Base64.DEFAULT);
+        return Base64.encodeToString(bytes, Base64.NO_WRAP);
     }
 
     /**
@@ -49,7 +49,7 @@ public class TripleDESUtils {
         SecretKey secretKey = new SecretKeySpec(key.getBytes(CHARSET), "DESede");
         Cipher cipher = Cipher.getInstance("DESede/ECB/PKCS5Padding");
         cipher.init(Cipher.DECRYPT_MODE, secretKey); // 对Cipher初始化，解密模式
-        byte[] bytes = cipher.doFinal(Base64.decode(data, Base64.DEFAULT)); // 解密data
+        byte[] bytes = cipher.doFinal(Base64.decode(data, Base64.NO_WRAP)); // 解密data
         return new String(bytes, CHARSET);
     }
 
@@ -67,7 +67,7 @@ public class TripleDESUtils {
         IvParameterSpec ips = new IvParameterSpec(iv.getBytes(CHARSET));
         cipher.init(Cipher.ENCRYPT_MODE, secretKey, ips);
         byte[] bytes = cipher.doFinal(data.getBytes(CHARSET));
-        return Base64.encodeToString(bytes, Base64.DEFAULT);
+        return Base64.encodeToString(bytes, Base64.NO_WRAP);
     }
 
     /**
@@ -83,7 +83,7 @@ public class TripleDESUtils {
         Cipher cipher = Cipher.getInstance("DESede/CBC/PKCS5Padding");
         IvParameterSpec ips = new IvParameterSpec(iv.getBytes(CHARSET));
         cipher.init(Cipher.DECRYPT_MODE, secretKey, ips);
-        byte[] bytes = cipher.doFinal(Base64.decode(data, Base64.DEFAULT));
+        byte[] bytes = cipher.doFinal(Base64.decode(data, Base64.NO_WRAP));
         return new String(bytes, CHARSET);
     }
 
