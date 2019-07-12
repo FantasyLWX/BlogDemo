@@ -82,6 +82,82 @@
                 android:textColorHint="@color/gray"
                 android:textSize="16sp" />
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:text="@string/crypto_encryption_mode"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <RadioGroup
+                    android:id="@+id/rg_crypto_encryption_mode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_crypto_ecb"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:text="@string/crypto_ecb" />
+
+                    <RadioButton
+                        android:id="@+id/rb_crypto_cbc"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/crypto_cbc" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:text="@string/crypto_output_mode"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <RadioGroup
+                    android:id="@+id/rg_crypto_output_mode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_crypto_base64"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:text="@string/crypto_base64" />
+
+                    <RadioButton
+                        android:id="@+id/rb_crypto_hex"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/crypto_hex" />
+                </RadioGroup>
+            </LinearLayout>
+
             <Button
                 android:id="@+id/btn_crypto_md5"
                 android:layout_width="match_parent"
@@ -92,35 +168,37 @@
                 android:textSize="18sp" />
 
             <Button
-                android:id="@+id/btn_crypto_3des_ecb_encrypt"
+                android:id="@+id/btn_crypto_3des_encrypt"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="20dp"
-                android:text="@string/crypto_3des_ecb_encrypt"
+                android:text="@string/crypto_3des_encrypt"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
             <Button
-                android:id="@+id/btn_crypto_3des_ecb_decrypt"
+                android:id="@+id/btn_crypto_3des_decrypt"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:text="@string/crypto_3des_ecb_decrypt"
+                android:text="@string/crypto_3des_decrypt"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
             <Button
-                android:id="@+id/btn_crypto_3des_cbc_encrypt"
+                android:id="@+id/btn_crypto_aes_encrypt"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:text="@string/crypto_3des_cbc_encrypt"
+                android:layout_marginTop="20dp"
+                android:text="@string/crypto_aes_encrypt"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
             <Button
-                android:id="@+id/btn_crypto_3des_cbc_decrypt"
+                android:id="@+id/btn_crypto_aes_decrypt"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:text="@string/crypto_3des_cbc_decrypt"
+                android:layout_marginBottom="20dp"
+                android:text="@string/crypto_aes_decrypt"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 

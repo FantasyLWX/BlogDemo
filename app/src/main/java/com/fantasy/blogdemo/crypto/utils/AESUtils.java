@@ -10,14 +10,14 @@ import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
 
 /**
- * 3DES加解密工具类
+ * AES加解密工具类
  * <pre>
  *     author  : Fantasy
- *     version : 1.1, 2019-07-12
- *     since   : 1.0, 2019-07-10
+ *     version : 1.0, 2019-07-12
+ *     since   : 1.0, 2019-07-12
  * </pre>
  */
-public class TripleDESUtils {
+public class AESUtils {
     private static final String CHARSET = "UTF-8";
 
     /**
@@ -25,7 +25,7 @@ public class TripleDESUtils {
      *
      * @param data           明文
      * @param key            密钥
-     * @param transformation 类型，格式为：加密算法/加密模式/填充方式，举例：DESede/CBC/PKCS5Padding，
+     * @param transformation 类型，格式为：加密算法/加密模式/填充方式，举例：AES/CBC/PKCS5Padding，
      *                       相关取值可以查看下列两个文档：
      *                       <ul>
      *                       <li><a href="https://docs.oracle.com/javase/8/docs/api">JavaSE 8 API</a>
@@ -46,7 +46,7 @@ public class TripleDESUtils {
      *
      * @param data           密文
      * @param key            密钥
-     * @param transformation 类型，格式为：加密算法/加密模式/填充方式，举例：DESede/CBC/PKCS5Padding，
+     * @param transformation 类型，格式为：加密算法/加密模式/填充方式，举例：AES/CBC/PKCS5Padding，
      *                       相关取值可以查看下列两个文档：
      *                       <ul>
      *                       <li><a href="https://docs.oracle.com/javase/8/docs/api">JavaSE 8 API</a>
@@ -67,7 +67,7 @@ public class TripleDESUtils {
      *
      * @param data           明文
      * @param key            密钥
-     * @param transformation 类型，格式为：加密算法/加密模式/填充方式，举例：DESede/CBC/PKCS5Padding，
+     * @param transformation 类型，格式为：加密算法/加密模式/填充方式，举例：AES/CBC/PKCS5Padding，
      *                       相关取值可以查看下列两个文档：
      *                       <ul>
      *                       <li><a href="https://docs.oracle.com/javase/8/docs/api">JavaSE 8 API</a>
@@ -88,7 +88,7 @@ public class TripleDESUtils {
      *
      * @param data           密文
      * @param key            密钥
-     * @param transformation 类型，格式为：加密算法/加密模式/填充方式，举例：DESede/CBC/PKCS5Padding，
+     * @param transformation 类型，格式为：加密算法/加密模式/填充方式，举例：AES/CBC/PKCS5Padding，
      *                       相关取值可以查看下列两个文档：
      *                       <ul>
      *                       <li><a href="https://docs.oracle.com/javase/8/docs/api">JavaSE 8 API</a>
@@ -109,7 +109,7 @@ public class TripleDESUtils {
      *
      * @param data           数据
      * @param key            密钥
-     * @param transformation 类型，格式为：加密算法/加密模式/填充方式，举例：<i>DESede/CBC/PKCS5Padding</i>。<br/>
+     * @param transformation 类型，格式为：加密算法/加密模式/填充方式，举例：<i>AES/CBC/PKCS5Padding</i>。<br/>
      *                       相关取值可以查看下列两个文档：
      *                       <ul>
      *                       <li><a href="https://docs.oracle.com/javase/8/docs/api">JavaSE 8 API</a>
@@ -124,7 +124,7 @@ public class TripleDESUtils {
      */
     private static byte[] handle(byte[] data, String key, String transformation, String iv,
                                  boolean isEncrypt) throws Exception {
-        SecretKey secretKey = new SecretKeySpec(key.getBytes(CHARSET), "DESede"); // 构造密钥
+        SecretKey secretKey = new SecretKeySpec(key.getBytes(CHARSET), "AES"); // 构造密钥
         Cipher cipher = Cipher.getInstance(transformation);
         if (iv == null || iv.length() == 0) {
             cipher.init(isEncrypt ? Cipher.ENCRYPT_MODE : Cipher.DECRYPT_MODE, secretKey);

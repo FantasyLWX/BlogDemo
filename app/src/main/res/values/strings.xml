@@ -27,9 +27,15 @@
     <string name="crypto_data_hint">请输入待加密或待解密的数据</string>
     <string name="crypto_result_hint">输出结果</string>
     <string name="crypto_exception">异常信息：</string>
+    <string name="crypto_ecb">ECB</string>
+    <string name="crypto_cbc">CBC</string>
+    <string name="crypto_base64">Base64</string>
+    <string name="crypto_hex">Hex</string>
+    <string name="crypto_encryption_mode">加密模式：</string>
+    <string name="crypto_output_mode">输出模式：</string>
     <string name="crypto_md5">MD5加密</string>
-    <string name="crypto_3des_ecb_encrypt">3DES（ECB模式）加密</string>
-    <string name="crypto_3des_ecb_decrypt">3DES（ECB模式）解密</string>
-    <string name="crypto_3des_cbc_encrypt">3DES（CBC模式）加密</string>
-    <string name="crypto_3des_cbc_decrypt">3DES（CBC模式）解密</string>
+    <string name="crypto_3des_encrypt">3DES加密</string>
+    <string name="crypto_3des_decrypt">3DES解密</string>
+    <string name="crypto_aes_encrypt">AES加密</string>
+    <string name="crypto_aes_decrypt">AES解密</string>
 </resources>
