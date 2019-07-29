@@ -65,7 +65,7 @@ public class Captcha {
     private TYPE mType;
     private Random mRandom;
 
-    private static Captcha mInstance;
+    private static Captcha sInstance;
     /**
      * 生成的验证码
      */
@@ -91,12 +91,12 @@ public class Captcha {
     }
 
     public static Captcha getInstance() {
-        if (mInstance == null) {
+        if (sInstance == null) {
             synchronized (Captcha.class) {
-                mInstance = new Captcha();
+                sInstance = new Captcha();
             }
         }
-        return mInstance;
+        return sInstance;
     }
 
     /**
@@ -107,7 +107,7 @@ public class Captcha {
      */
     public Captcha setType(TYPE type) {
         mType = type;
-        return mInstance;
+        return sInstance;
     }
 
     /**
@@ -120,18 +120,18 @@ public class Captcha {
     public Captcha setSize(int width, int height) {
         mWidth = width;
         mHeight = height;
-        return mInstance;
+        return sInstance;
     }
 
     /**
      * 设置背景颜色
      *
-     * @param color 颜色
+     * @param color 颜色，十六进制形式，例如：0xAEAEAEAE
      * @return CaptchaUtils实例
      */
     public Captcha setBackgroundColor(int color) {
         mBackgroundColor = color;
-        return mInstance;
+        return sInstance;
     }
 
     /**
@@ -142,7 +142,7 @@ public class Captcha {
      */
     public Captcha setLength(int length) {
         mLength = length;
-        return mInstance;
+        return sInstance;
     }
 
     /**
@@ -153,7 +153,7 @@ public class Captcha {
      */
     public Captcha setLineNumber(int number) {
         mLineNumber = number;
-        return mInstance;
+        return sInstance;
     }
 
     /**
@@ -164,7 +164,7 @@ public class Captcha {
      */
     public Captcha setFontSize(int size) {
         mFontSize = size;
-        return mInstance;
+        return sInstance;
     }
 
     /**
@@ -177,7 +177,7 @@ public class Captcha {
     public Captcha setFontPadding(int paddingLeft, int paddingTop) {
         mFontPaddingLeft = paddingLeft;
         mFontPaddingTop = paddingTop;
-        return mInstance;
+        return sInstance;
     }
 
     /**
@@ -195,7 +195,7 @@ public class Captcha {
         mFontPaddingLeftRang = paddingLeftRang;
         mFontPaddingTop = paddingTop;
         mFontPaddingTopRang = paddingTopRang;
-        return mInstance;
+        return sInstance;
     }
 
     /**

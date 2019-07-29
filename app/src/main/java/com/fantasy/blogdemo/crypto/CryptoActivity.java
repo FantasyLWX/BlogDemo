@@ -184,8 +184,8 @@ public class CryptoActivity extends BaseActivity implements View.OnClickListener
                     }
                     break;
                 case R.id.btn_crypto_aes_decrypt: // AES解密
-                    key = mEtKey.getText().toString(); // 密钥长度16位或者24位
-                    iv = mEtIv.getText().toString(); // IV偏移量的长度必须为8位
+                    key = mEtKey.getText().toString(); // 密钥长度16位、24位、32位
+                    iv = mEtIv.getText().toString(); // IV偏移量的长度必须为16位
                     data = mEtData.getText().toString();
                     if (mEncryptionModeCheckedId == R.id.rb_crypto_ecb) {
                         transformation = "AES/ECB/PKCS5Padding";

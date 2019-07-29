@@ -11,12 +11,13 @@ import com.fantasy.blogdemo.base.BaseActivity;
 import com.fantasy.blogdemo.captcha.CaptchaActivity;
 import com.fantasy.blogdemo.crypto.CryptoActivity;
 import com.fantasy.blogdemo.screenshot.ScreenShotActivity;
+import com.fantasy.blogdemo.utils.Watermark;
 
 /**
  * 主界面
  * <pre>
  *     author  : Fantasy
- *     version : 1.2, 2019-07-10
+ *     version : 1.3, 2019-07-29
  *     since   : 1.0, 2019-06-05
  * </pre>
  */
@@ -34,6 +35,15 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Watermark.getInstance().show(this, "Fantasy BlogDemo");
+//        Watermark.getInstance()
+//                .setText("Fantasy BlogDemo")
+//                .setTextColor(0xAE000000)
+//                .setTextSize(16)
+//                .setRotation(-30)
+//                .show(this);
+
         bindEvent();
     }
 
