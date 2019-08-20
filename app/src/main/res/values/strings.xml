@@ -22,6 +22,9 @@
     <string name="captcha_wrong">验证码错误</string>
 
     <!-- 加解密 -->
+    <string name="crypto_title_symmetric">对称加密</string>
+    <string name="crypto_title_asymmetric">非对称加密</string>
+    <string name="crypto_title_hash">哈希</string>
     <string name="crypto_key_hint">请输入密钥</string>
     <string name="crypto_iv_hint">请输入偏移量，ECB模式不用填写</string>
     <string name="crypto_data_hint">请输入待加密或待解密的数据</string>

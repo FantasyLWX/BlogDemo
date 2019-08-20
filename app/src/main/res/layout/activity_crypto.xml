@@ -23,182 +23,29 @@
             android:layout_marginEnd="20dp"
             android:orientation="vertical">
 
-            <EditText
-                android:id="@+id/et_crypto_key"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="20dp"
-                android:background="@color/white"
-                android:hint="@string/crypto_key_hint"
-                android:imeOptions="actionNext"
-                android:inputType="text"
-                android:paddingStart="15dp"
-                android:paddingEnd="15dp"
-                android:textColor="@color/black"
-                android:textColorHint="@color/gray"
-                android:textSize="16sp" />
-
-            <EditText
-                android:id="@+id/et_crypto_iv"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="20dp"
-                android:background="@color/white"
-                android:hint="@string/crypto_iv_hint"
-                android:imeOptions="actionNext"
-                android:inputType="text"
-                android:paddingStart="15dp"
-                android:paddingEnd="15dp"
-                android:textColor="@color/black"
-                android:textColorHint="@color/gray"
-                android:textSize="16sp" />
-
-            <EditText
-                android:id="@+id/et_crypto_data"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="20dp"
-                android:background="@color/white"
-                android:hint="@string/crypto_data_hint"
-                android:imeOptions="actionDone"
-                android:inputType="text"
-                android:paddingStart="15dp"
-                android:paddingEnd="15dp"
-                android:textColor="@color/black"
-                android:textColorHint="@color/gray"
-                android:textSize="16sp" />
-
-            <EditText
-                android:id="@+id/et_crypto_result"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="20dp"
-                android:background="@color/white"
-                android:hint="@string/crypto_result_hint"
-                android:inputType="text"
-                android:paddingStart="15dp"
-                android:paddingEnd="15dp"
-                android:textColor="@color/black"
-                android:textColorHint="@color/gray"
-                android:textSize="16sp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:gravity="center_vertical"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="20dp"
-                    android:text="@string/crypto_encryption_mode"
-                    android:textColor="@color/black"
-                    android:textSize="16sp" />
-
-                <RadioGroup
-                    android:id="@+id/rg_crypto_encryption_mode"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <RadioButton
-                        android:id="@+id/rb_crypto_ecb"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:checked="true"
-                        android:text="@string/crypto_ecb" />
-
-                    <RadioButton
-                        android:id="@+id/rb_crypto_cbc"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="@string/crypto_cbc" />
-                </RadioGroup>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:gravity="center_vertical"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="20dp"
-                    android:text="@string/crypto_output_mode"
-                    android:textColor="@color/black"
-                    android:textSize="16sp" />
-
-                <RadioGroup
-                    android:id="@+id/rg_crypto_output_mode"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <RadioButton
-                        android:id="@+id/rb_crypto_base64"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:checked="true"
-                        android:text="@string/crypto_base64" />
-
-                    <RadioButton
-                        android:id="@+id/rb_crypto_hex"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="@string/crypto_hex" />
-                </RadioGroup>
-            </LinearLayout>
-
             <Button
-                android:id="@+id/btn_crypto_md5"
+                android:id="@+id/btn_crypto_hash"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="20dp"
-                android:text="@string/crypto_md5"
+                android:text="@string/crypto_title_hash"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
             <Button
-                android:id="@+id/btn_crypto_3des_encrypt"
+                android:id="@+id/btn_crypto_symmetric"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginTop="20dp"
-                android:text="@string/crypto_3des_encrypt"
+                android:text="@string/crypto_title_symmetric"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
             <Button
-                android:id="@+id/btn_crypto_3des_decrypt"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:text="@string/crypto_3des_decrypt"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
-
-            <Button
-                android:id="@+id/btn_crypto_aes_encrypt"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="20dp"
-                android:text="@string/crypto_aes_encrypt"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
-
-            <Button
-                android:id="@+id/btn_crypto_aes_decrypt"
+                android:id="@+id/btn_crypto_asymmetric"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginBottom="20dp"
-                android:text="@string/crypto_aes_decrypt"
+                android:text="@string/crypto_title_asymmetric"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 

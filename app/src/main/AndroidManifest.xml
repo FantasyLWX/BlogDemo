@@ -28,6 +28,9 @@
             android:name=".captcha.CaptchaActivity"
             android:windowSoftInputMode="adjustResize" />
         <activity android:name=".crypto.CryptoActivity" />
+        <activity android:name=".crypto.SymmetricEncryptActivity" />
+        <activity android:name=".crypto.HashActivity" />
+        <activity android:name=".crypto.AsymmetricEncryptActivity" />
     </application>
 
 </manifest>
