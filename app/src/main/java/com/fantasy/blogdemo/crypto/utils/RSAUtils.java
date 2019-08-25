@@ -38,10 +38,10 @@ public class RSAUtils {
      *                       </ul>
      * @return 密文
      */
-    public static String encryptBase64(String data, String publicKey, int keySize, String transformation) {
+    public static String encryptBase64(String data, byte[] publicKey, int keySize, String transformation) {
         try {
-            return Base64.encodeToString(handle(data.getBytes(CHARSET), Base64.decode(publicKey, Base64.NO_WRAP),
-                    keySize, transformation, true), Base64.NO_WRAP);
+            return Base64.encodeToString(handle(data.getBytes(CHARSET), publicKey, keySize, transformation,
+                    true), Base64.NO_WRAP);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -49,11 +49,11 @@ public class RSAUtils {
     }
 
     /**
-     * 解密，密文为Base64字符串
+     * 加密，输出Base64字符串密文
      *
-     * @param data           密文
-     * @param privateKey     私钥
-     * @param keySize        私钥大小，举例：1024, 2048...
+     * @param data           明文
+     * @param publicKey      公钥（Base64字符串）
+     * @param keySize        公钥大小，举例：1024, 2048...
      * @param transformation 类型，格式为：加密算法/加密模式/填充方式，举例：<i>RSA/None/PKCS1Padding</i>。<br/>
      *                       相关取值可以查看下列两个文档：
      *                       <ul>
@@ -62,12 +62,12 @@ public class RSAUtils {
      *                       <li><a href="https://docs.oracle.com/javase/8/docs/technotes/guides/security/StandardNames.html#Cipher">
      *                       Standard Algorithm Name Documentation</a></li>
      *                       </ul>
-     * @return 明文
+     * @return 密文
      */
-    public static String decryptBase64(String data, String privateKey, int keySize, String transformation) {
+    public static String encryptBase64(String data, String publicKey, int keySize, String transformation) {
         try {
-            return new String(handle(Base64.decode(data, Base64.NO_WRAP), Base64.decode(privateKey, Base64.NO_WRAP),
-                    keySize, transformation, false), CHARSET);
+            return Base64.encodeToString(handle(data.getBytes(CHARSET), Base64.decode(publicKey, Base64.NO_WRAP),
+                    keySize, transformation, true), Base64.NO_WRAP);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -90,10 +90,89 @@ public class RSAUtils {
      *                       </ul>
      * @return 密文
      */
+    public static String encryptHex(String data, byte[] publicKey, int keySize, String transformation) {
+        try {
+            return ConvertUtils.bytesToHexString(handle(data.getBytes(CHARSET), publicKey, keySize,
+                    transformation, true));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+
+    /**
+     * 加密，输出十六进制字符串密文
+     *
+     * @param data           明文
+     * @param publicKey      公钥（Base64字符串）
+     * @param keySize        公钥大小，举例：1024, 2048...
+     * @param transformation 类型，格式为：加密算法/加密模式/填充方式，举例：<i>RSA/None/PKCS1Padding</i>。<br/>
+     *                       相关取值可以查看下列两个文档：
+     *                       <ul>
+     *                       <li><a href="https://docs.oracle.com/javase/8/docs/api">JavaSE 8 API</a>
+     *                       中的 javax.crypto.Cipher</li>
+     *                       <li><a href="https://docs.oracle.com/javase/8/docs/technotes/guides/security/StandardNames.html#Cipher">
+     *                       Standard Algorithm Name Documentation</a></li>
+     *                       </ul>
+     * @return 密文
+     */
     public static String encryptHex(String data, String publicKey, int keySize, String transformation) {
         try {
-            return ConvertUtils.bytesToHexString(handle(data.getBytes(CHARSET), Base64.decode(publicKey, Base64.NO_WRAP),
-                    keySize, transformation, true));
+            return ConvertUtils.bytesToHexString(handle(data.getBytes(CHARSET),
+                    Base64.decode(publicKey, Base64.NO_WRAP), keySize, transformation, true));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    /**
+     * 解密，密文为Base64字符串
+     *
+     * @param data           密文
+     * @param privateKey     私钥
+     * @param keySize        私钥大小，举例：1024, 2048...
+     * @param transformation 类型，格式为：加密算法/加密模式/填充方式，举例：<i>RSA/None/PKCS1Padding</i>。<br/>
+     *                       相关取值可以查看下列两个文档：
+     *                       <ul>
+     *                       <li><a href="https://docs.oracle.com/javase/8/docs/api">JavaSE 8 API</a>
+     *                       中的 javax.crypto.Cipher</li>
+     *                       <li><a href="https://docs.oracle.com/javase/8/docs/technotes/guides/security/StandardNames.html#Cipher">
+     *                       Standard Algorithm Name Documentation</a></li>
+     *                       </ul>
+     * @return 明文
+     */
+    public static String decryptBase64(String data, byte[] privateKey, int keySize, String transformation) {
+        try {
+            return new String(handle(Base64.decode(data, Base64.NO_WRAP), privateKey, keySize,
+                    transformation, false), CHARSET);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    /**
+     * 解密，密文为Base64字符串
+     *
+     * @param data           密文
+     * @param privateKey     私钥（Base64字符串）
+     * @param keySize        私钥大小，举例：1024, 2048...
+     * @param transformation 类型，格式为：加密算法/加密模式/填充方式，举例：<i>RSA/None/PKCS1Padding</i>。<br/>
+     *                       相关取值可以查看下列两个文档：
+     *                       <ul>
+     *                       <li><a href="https://docs.oracle.com/javase/8/docs/api">JavaSE 8 API</a>
+     *                       中的 javax.crypto.Cipher</li>
+     *                       <li><a href="https://docs.oracle.com/javase/8/docs/technotes/guides/security/StandardNames.html#Cipher">
+     *                       Standard Algorithm Name Documentation</a></li>
+     *                       </ul>
+     * @return 明文
+     */
+    public static String decryptBase64(String data, String privateKey, int keySize, String transformation) {
+        try {
+            return new String(handle(Base64.decode(data, Base64.NO_WRAP), Base64.decode(privateKey, Base64.NO_WRAP),
+                    keySize, transformation, false), CHARSET);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -105,6 +184,31 @@ public class RSAUtils {
      *
      * @param data           密文
      * @param privateKey     私钥
+     * @param keySize        私钥大小，举例：1024, 2048...
+     * @param transformation 类型，格式为：加密算法/加密模式/填充方式，举例：<i>RSA/None/PKCS1Padding</i>。<br/>
+     *                       相关取值可以查看下列两个文档：
+     *                       <ul>
+     *                       <li><a href="https://docs.oracle.com/javase/8/docs/api">JavaSE 8 API</a>
+     *                       中的 javax.crypto.Cipher</li>
+     *                       <li><a href="https://docs.oracle.com/javase/8/docs/technotes/guides/security/StandardNames.html#Cipher">
+     *                       Standard Algorithm Name Documentation</a></li>
+     *                       </ul>
+     * @return 明文
+     */
+    public static String decryptHex(String data, byte[] privateKey, int keySize, String transformation) {
+        try {
+            return new String(handle(ConvertUtils.hexStringToBytes(data), privateKey, keySize, transformation, false), CHARSET);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    /**
+     * 解密，密文为十六进制字符串
+     *
+     * @param data           密文
+     * @param privateKey     私钥（Base64字符串）
      * @param keySize        私钥大小，举例：1024, 2048...
      * @param transformation 类型，格式为：加密算法/加密模式/填充方式，举例：<i>RSA/None/PKCS1Padding</i>。<br/>
      *                       相关取值可以查看下列两个文档：
