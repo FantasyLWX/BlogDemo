@@ -21,10 +21,8 @@
     <string name="captcha_correct">验证码正确</string>
     <string name="captcha_wrong">验证码错误</string>
 
-    <!-- 加解密 -->
+    <!-- 对称加密 -->
     <string name="crypto_title_symmetric">对称加密</string>
-    <string name="crypto_title_asymmetric">非对称加密</string>
-    <string name="crypto_title_hash">哈希</string>
     <string name="crypto_key_hint">请输入密钥</string>
     <string name="crypto_iv_hint">请输入偏移量，ECB模式不用填写</string>
     <string name="crypto_data_hint">请输入待加密或待解密的数据</string>
@@ -36,9 +34,19 @@
     <string name="crypto_hex">Hex</string>
     <string name="crypto_encryption_mode">加密模式：</string>
     <string name="crypto_output_mode">输出模式：</string>
-    <string name="crypto_md5">MD5加密</string>
     <string name="crypto_3des_encrypt">3DES加密</string>
     <string name="crypto_3des_decrypt">3DES解密</string>
     <string name="crypto_aes_encrypt">AES加密</string>
     <string name="crypto_aes_decrypt">AES解密</string>
+
+    <!-- 非对称加密 -->
+    <string name="crypto_title_asymmetric">非对称加密</string>
+    <string name="crypto_public_key_hint">请输入公钥</string>
+    <string name="crypto_private_key_hint">请输入私钥</string>
+    <string name="crypto_rsa_encrypt">RSA加密</string>
+    <string name="crypto_rsa_decrypt">RSA解密</string>
+
+    <!-- 哈希 -->
+    <string name="crypto_title_hash">哈希</string>
+    <string name="crypto_md5">MD5加密</string>
 </resources>
