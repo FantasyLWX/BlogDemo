@@ -102,7 +102,7 @@ public class SymmetricEncryptActivity extends BaseActivity implements View.OnCli
                                 result = TripleDESUtils.encryptHex(data, key, transformation, null);
                             }
                             mEtResult.setText(result);
-                            Log.d(Constant.TAG, "data : " + data + " result : " + result + " key : " + key);
+                            Log.d(Constant.TAG, mClassName + " data : " + data + " result : " + result + " key : " + key);
                         }
                     } else {
                         transformation = "DESede/CBC/PKCS5Padding";
@@ -113,7 +113,7 @@ public class SymmetricEncryptActivity extends BaseActivity implements View.OnCli
                                 result = TripleDESUtils.encryptHex(data, key, transformation, iv);
                             }
                             mEtResult.setText(result);
-                            Log.d(Constant.TAG, "data : " + data + " result : " + result + " key : " + key + " iv : " + iv);
+                            Log.d(Constant.TAG, mClassName + " data : " + data + " result : " + result + " key : " + key + " iv : " + iv);
                         }
                     }
                     break;
@@ -130,7 +130,7 @@ public class SymmetricEncryptActivity extends BaseActivity implements View.OnCli
                                 result = TripleDESUtils.decryptHex(data, key, transformation, null);
                             }
                             mEtResult.setText(result);
-                            Log.d(Constant.TAG, "data : " + data + " result : " + result + " key : " + key);
+                            Log.d(Constant.TAG, mClassName + " data : " + data + " result : " + result + " key : " + key);
                         }
                     } else {
                         transformation = "DESede/CBC/PKCS5Padding";
@@ -141,7 +141,7 @@ public class SymmetricEncryptActivity extends BaseActivity implements View.OnCli
                                 result = TripleDESUtils.decryptHex(data, key, transformation, iv);
                             }
                             mEtResult.setText(result);
-                            Log.d(Constant.TAG, "data : " + data + " result : " + result + " key : " + key + " iv : " + iv);
+                            Log.d(Constant.TAG, mClassName + " data : " + data + " result : " + result + " key : " + key + " iv : " + iv);
                         }
                     }
                     break;
@@ -158,7 +158,7 @@ public class SymmetricEncryptActivity extends BaseActivity implements View.OnCli
                                 result = AESUtils.encryptHex(data, key, transformation, null);
                             }
                             mEtResult.setText(result);
-                            Log.d(Constant.TAG, "data : " + data + " result : " + result + " key : " + key);
+                            Log.d(Constant.TAG, mClassName + " data : " + data + " result : " + result + " key : " + key);
                         }
                     } else {
                         transformation = "AES/CBC/PKCS5Padding";
@@ -169,7 +169,7 @@ public class SymmetricEncryptActivity extends BaseActivity implements View.OnCli
                                 result = AESUtils.encryptHex(data, key, transformation, iv);
                             }
                             mEtResult.setText(result);
-                            Log.d(Constant.TAG, "data : " + data + " result : " + result + " key : " + key + " iv : " + iv);
+                            Log.d(Constant.TAG, mClassName + " data : " + data + " result : " + result + " key : " + key + " iv : " + iv);
                         }
                     }
                     break;
@@ -186,7 +186,7 @@ public class SymmetricEncryptActivity extends BaseActivity implements View.OnCli
                                 result = AESUtils.decryptHex(data, key, transformation, null);
                             }
                             mEtResult.setText(result);
-                            Log.d(Constant.TAG, "data : " + data + " result : " + result + " key : " + key);
+                            Log.d(Constant.TAG, mClassName + " data : " + data + " result : " + result + " key : " + key);
                         }
                     } else {
                         transformation = "AES/CBC/PKCS5Padding";
@@ -197,7 +197,7 @@ public class SymmetricEncryptActivity extends BaseActivity implements View.OnCli
                                 result = AESUtils.decryptHex(data, key, transformation, iv);
                             }
                             mEtResult.setText(result);
-                            Log.d(Constant.TAG, "data : " + data + " result : " + result + " key : " + key + " iv : " + iv);
+                            Log.d(Constant.TAG, mClassName + " data : " + data + " result : " + result + " key : " + key + " iv : " + iv);
                         }
                     }
                     break;

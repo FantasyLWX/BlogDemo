@@ -97,7 +97,7 @@ public class AsymmetricEncryptActivity extends BaseActivity implements View.OnCl
                         result = RSAUtils.encryptHex(data, key, 1024, mTransformation);
                     }
                     mEtResult.setText(result);
-                    Log.d(Constant.TAG, "publicKey : " + key + "\ndata : " + data + "\nresult : " + result);
+                    Log.d(Constant.TAG, mClassName + " publicKey : " + key + "\ndata : " + data + "\nresult : " + result);
                 }
                 break;
             case R.id.btn_crypto_rsa_decrypt: // RSA解密（私钥）
@@ -110,7 +110,7 @@ public class AsymmetricEncryptActivity extends BaseActivity implements View.OnCl
                         result = RSAUtils.decryptHex(data, key, 1024, mTransformation);
                     }
                     mEtResult.setText(result);
-                    Log.d(Constant.TAG, "privateKey : " + key + "\ndata : " + data + "\nresult : " + result);
+                    Log.d(Constant.TAG, mClassName + " privateKey : " + key + "\ndata : " + data + "\nresult : " + result);
                 }
                 break;
             default:

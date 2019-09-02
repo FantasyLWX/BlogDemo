@@ -28,7 +28,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="20dp"
-                android:text="@string/crypto_title_hash"
+                android:text="@string/crypto_title_message_digest"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 

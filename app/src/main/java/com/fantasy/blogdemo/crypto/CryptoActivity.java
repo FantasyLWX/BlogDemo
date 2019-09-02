@@ -49,7 +49,7 @@ public class CryptoActivity extends BaseActivity implements View.OnClickListener
                 finish();
                 break;
             case R.id.btn_crypto_hash:
-                HashActivity.actionStart(mContext);
+                MessageDigestActivity.actionStart(mContext);
                 break;
             case R.id.btn_crypto_symmetric:
                 SymmetricEncryptActivity.actionStart(mContext);

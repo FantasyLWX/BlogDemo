@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.fantasy.blogdemo">
 
-    <!-- 监听系统截屏 -->
+    <!-- 监听系统截屏、打开系统文件选择器 -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
@@ -29,7 +29,7 @@
             android:windowSoftInputMode="adjustResize" />
         <activity android:name=".crypto.CryptoActivity" />
         <activity android:name=".crypto.SymmetricEncryptActivity" />
-        <activity android:name=".crypto.HashActivity" />
+        <activity android:name=".crypto.MessageDigestActivity" />
         <activity android:name=".crypto.AsymmetricEncryptActivity" />
     </application>
 

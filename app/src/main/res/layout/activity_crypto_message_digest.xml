@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".crypto.MessageDigestActivity">
+
+    <include
+        layout="@layout/view_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_crypto_message_digest_data"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/white"
+                android:hint="@string/crypto_message_digest_data_hint"
+                android:inputType="text"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_crypto_message_digest_key"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/white"
+                android:hint="@string/crypto_message_digest_key_hint"
+                android:inputType="text"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_crypto_message_digest_result"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/white"
+                android:hint="@string/crypto_result_hint"
+                android:inputType="text"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_crypto_md5_file"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/crypto_md5_file"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btn_crypto_md2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="@string/crypto_md2"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btn_crypto_md5"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="@string/crypto_md5"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btn_crypto_sha1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="@string/crypto_sha1"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btn_crypto_sha224"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="@string/crypto_sha224"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btn_crypto_sha256"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="@string/crypto_sha256"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btn_crypto_sha384"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="@string/crypto_sha384"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btn_crypto_sha512"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="@string/crypto_sha512"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btn_crypto_hmacmd5"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="@string/crypto_hmacmd5"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btn_crypto_hmacsha1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="@string/crypto_hmacsha1"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btn_crypto_hmacsha224"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="@string/crypto_hmacsha224"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btn_crypto_hmacsha256"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="@string/crypto_hmacsha256"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btn_crypto_hmacsha384"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="@string/crypto_hmacsha384"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btn_crypto_hmacsha512"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="20dp"
+                android:text="@string/crypto_hmacsha512"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

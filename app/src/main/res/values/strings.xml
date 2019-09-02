@@ -46,7 +46,23 @@
     <string name="crypto_rsa_encrypt">RSA加密</string>
     <string name="crypto_rsa_decrypt">RSA解密</string>
 
-    <!-- 哈希 -->
-    <string name="crypto_title_hash">哈希</string>
-    <string name="crypto_md5">MD5加密</string>
+    <!-- 信息摘要 -->
+    <string name="crypto_title_message_digest">信息摘要</string>
+    <string name="crypto_message_digest_data_hint">请输入待加密数据</string>
+    <string name="crypto_message_digest_key_hint">请输入密钥，Hmac才需要</string>
+    <string name="crypto_message_digest_permission">如果您拒绝此权限，将无法选择文件进行MD5加密，请点击授予权限。</string>
+    <string name="crypto_md5_file">使用MD5加密文件</string>
+    <string name="crypto_md2">MD2</string>
+    <string name="crypto_md5">MD5</string>
+    <string name="crypto_sha1">SHA1</string>
+    <string name="crypto_sha224">SHA224</string>
+    <string name="crypto_sha256">SHA256</string>
+    <string name="crypto_sha384">SHA384</string>
+    <string name="crypto_sha512">SHA512</string>
+    <string name="crypto_hmacmd5">HmacMD5</string>
+    <string name="crypto_hmacsha1">HmacSHA1</string>
+    <string name="crypto_hmacsha224">HmacSHA224</string>
+    <string name="crypto_hmacsha256">HmacSHA256</string>
+    <string name="crypto_hmacsha384">HmacSHA384</string>
+    <string name="crypto_hmacsha512">HmacSHA512</string>
 </resources>
