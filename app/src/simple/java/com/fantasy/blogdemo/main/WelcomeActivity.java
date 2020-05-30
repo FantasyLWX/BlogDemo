@@ -6,15 +6,17 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
+import android.widget.Toast;
 
+import com.fantasy.blogdemo.BuildConfig;
 import com.fantasy.blogdemo.R;
 import com.fantasy.blogdemo.base.BaseActivity;
 
 /**
- * 主界面
+ * 主界面（简易版）
  * <pre>
  *     author  : Fantasy
- *     version : 1.0, 2019-06-05
+ *     version : 1.1, 2020-05-30
  *     since   : 1.0, 2019-06-05
  * </pre>
  */
@@ -40,6 +42,18 @@ public class WelcomeActivity extends BaseActivity {
             decorView.setSystemUiVisibility(option);
             getWindow().setStatusBarColor(Color.TRANSPARENT);
         }
+
+        // 因为简易版没有依赖 QMUI，所以无法使用 QMUIDialog
+        Toast.makeText(this, "服务器地址为：" + BuildConfig.SERVER_URL, Toast.LENGTH_LONG).show();
+//        new QMUIDialog.MessageDialogBuilder(this)
+//                .setMessage("服务器地址为：" + BuildConfig.SERVER_URL)
+//                .addAction(R.string.btn_confirm, new QMUIDialogAction.ActionListener() {
+//                    @Override
+//                    public void onClick(QMUIDialog dialog, int index) {
+//                        dialog.dismiss();
+//                    }
+//                })
+//                .show();
 
         new Handler().postDelayed(new Runnable() {
             @Override

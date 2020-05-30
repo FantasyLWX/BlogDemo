@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name">BlogDemo</string>
 
     <!-- 共用的 -->
     <string name="btn_confirm">确定</string>
