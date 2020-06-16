@@ -13,5 +13,4 @@ public class Constant {
      * 日志打印的标签
      */
     public static final String TAG = "log";
-
 }
