@@ -8,6 +8,7 @@
     <string name="main_screen_shot">截屏</string>
     <string name="main_captcha">图形验证码</string>
     <string name="main_crypto">加解密</string>
+    <string name="main_check_emulator">检测模拟器</string>
 
     <!-- 截屏 -->
     <string name="screen_shot_system">监听系统截屏</string>
@@ -64,4 +65,10 @@
     <string name="crypto_hmacsha256">HmacSHA256</string>
     <string name="crypto_hmacsha384">HmacSHA384</string>
     <string name="crypto_hmacsha512">HmacSHA512</string>
+
+    <!-- 检测模拟器 -->
+    <string name="emulator_check">标准模式</string>
+    <string name="emulator_check_safely">安全模式</string>
+    <string name="emulator_true">是模拟器</string>
+    <string name="emulator_false">不是模拟器</string>
 </resources>

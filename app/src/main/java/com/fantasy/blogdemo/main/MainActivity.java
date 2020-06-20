@@ -10,6 +10,7 @@ import com.fantasy.blogdemo.R;
 import com.fantasy.blogdemo.base.BaseActivity;
 import com.fantasy.blogdemo.captcha.CaptchaActivity;
 import com.fantasy.blogdemo.crypto.CryptoActivity;
+import com.fantasy.blogdemo.emulator.CheckEmulatorActivity;
 import com.fantasy.blogdemo.screenshot.ScreenShotActivity;
 import com.fantasy.blogdemo.utils.Watermark;
 
@@ -17,7 +18,7 @@ import com.fantasy.blogdemo.utils.Watermark;
  * 主界面
  * <pre>
  *     author  : Fantasy
- *     version : 1.3, 2019-07-29
+ *     version : 1.4, 2020-06-20
  *     since   : 1.0, 2019-06-05
  * </pre>
  */
@@ -53,6 +54,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         findViewById(R.id.cd_main_screen_shot).setOnClickListener(this);
         findViewById(R.id.cd_main_captcha).setOnClickListener(this);
         findViewById(R.id.cd_main_crypto).setOnClickListener(this);
+        findViewById(R.id.cd_main_check_emulator).setOnClickListener(this);
     }
 
     @Override
@@ -74,6 +76,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 break;
             case R.id.cd_main_crypto:
                 CryptoActivity.actionStart(mContext);
+                break;
+            case R.id.cd_main_check_emulator:
+                CheckEmulatorActivity.actionStart(mContext);
                 break;
             default:
                 break;

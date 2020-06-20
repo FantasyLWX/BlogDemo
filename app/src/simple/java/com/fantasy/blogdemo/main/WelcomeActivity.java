@@ -6,7 +6,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
-import android.widget.Toast;
 
 import com.fantasy.blogdemo.BuildConfig;
 import com.fantasy.blogdemo.R;
@@ -44,7 +43,7 @@ public class WelcomeActivity extends BaseActivity {
         }
 
         // 因为简易版没有依赖 QMUI，所以无法使用 QMUIDialog
-        Toast.makeText(this, "服务器地址为：" + BuildConfig.SERVER_URL, Toast.LENGTH_LONG).show();
+        showLongToast("服务器地址为：" + BuildConfig.SERVER_URL);
 //        new QMUIDialog.MessageDialogBuilder(this)
 //                .setMessage("服务器地址为：" + BuildConfig.SERVER_URL)
 //                .addAction(R.string.btn_confirm, new QMUIDialogAction.ActionListener() {

@@ -5,11 +5,11 @@ static def getTime() {
 }
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
 
     defaultConfig {
-        minSdkVersion 21
-        targetSdkVersion 28
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -56,6 +56,8 @@ dependencies {
     implementation 'com.android.support:cardview-v7:28.0.0'
     // 权限申请，https://github.com/soulqw/SoulPermission
     implementation 'com.qw:soulpermission:1.1.7'
+
+    implementation project(':lib_anti_emulator')
 
     /******************** 下面是 profession 专业版 单独需要的依赖 ********************/
     professionImplementation 'com.qmuiteam:qmui:1.2.0'

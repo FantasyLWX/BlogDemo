@@ -31,6 +31,7 @@
         <activity android:name=".crypto.SymmetricEncryptActivity" />
         <activity android:name=".crypto.MessageDigestActivity" />
         <activity android:name=".crypto.AsymmetricEncryptActivity" />
+        <activity android:name=".emulator.CheckEmulatorActivity" />
     </application>
 
 </manifest>
